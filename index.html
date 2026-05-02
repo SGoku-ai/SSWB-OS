@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSWD OS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="desktop" id="desktop">
+        <!-- Desktop Shortcuts -->
+        <div class="icon" style="top:40px; left:40px" onclick="openBrowser()">
+            <div class="icon-img">🌐</div>
+            <span>Browser</span>
+        </div>
+
+        <div class="icon" style="top:140px; left:40px" onclick="openCalculator()">
+            <div class="icon-img">🧮</div>
+            <span>Calculator</span>
+        </div>
+
+        <div class="icon" style="top:240px; left:40px" onclick="openTimer()">
+            <div class="icon-img">⏱️</div>
+            <span>Timer</span>
+        </div>
+
+        <div class="icon" style="top:340px; left:40px" onclick="openNotes()">
+            <div class="icon-img">📝</div>
+            <span>Notes</span>
+        </div>
+
+        <div class="icon" style="top:440px; left:40px" onclick="openFiles()">
+            <div class="icon-img">📁</div>
+            <span>Files</span>
+        </div>
+
+        <!-- Start Menu Popup -->
+        <div id="start-menu" class="start-menu hidden">
+            <div class="start-item" onclick="openSettings()">⚙️ Settings</div>
+            <div class="start-item" onclick="restartSystem()">🔄 Restart</div>
+        </div>
+    </div>
+
+    <!-- Floating Taskbar -->
+    <nav class="taskbar">
+        <button class="start-btn" onclick="toggleStart()">🚀</button>
+        
+        <div class="taskbar-items" id="taskbar-items">
+            <!-- Open app icons appear here horizontally -->
+        </div>
+
+        <div class="system-tray">
+            <span id="clock">--:--</span>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
